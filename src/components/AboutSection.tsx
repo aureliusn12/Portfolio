@@ -1,8 +1,8 @@
 "use client"
 
 import { SkillCard } from "./SkillCard"
-import { personalInfo } from "@/data/personalInfo"
-import { skills } from "@/data/skills"
+import { personalInfo } from "../data/personalInfo"
+import { skills } from "../data/skills"
 
 export const AboutSection = () => {
   return (

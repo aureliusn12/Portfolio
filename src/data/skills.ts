@@ -1,5 +1,5 @@
 import { Code, Palette, Smartphone } from "lucide-react"
-import type { Skill } from "@/types"
+import type { Skill } from "../types"
 
 export const skills: Skill[] = [
   {

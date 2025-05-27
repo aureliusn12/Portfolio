@@ -1,13 +1,13 @@
-import type { PersonalInfo } from "@/types"
+import type { PersonalInfo } from "../types"
 
 export const personalInfo: PersonalInfo = {
   name: "Aurelius Navi",
   title: "Desenvolvedor Full Stack & Designer UI/UX",
   description:
     "Transformo ideias em experiências digitais incríveis. Especializado em React, Node.js e design responsivo.",
-  email: "seu.email@exemplo.com",
-  github: "https://github.com/seuusuario",
-  linkedin: "https://linkedin.com/in/seuusuario",
+  email: "aureliusnavi7@gmail.com",
+  github: "https://github.com/aureliusn12",
+  linkedin: "https://linkedin.com/in/aureliusnavi",
   bio: {
     title: "Desenvolvedor Apaixonado por Tecnologia",
     paragraph1:

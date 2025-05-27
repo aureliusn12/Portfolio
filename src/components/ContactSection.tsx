@@ -1,9 +1,9 @@
 "use client"
 
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "../components/ui/card"
+import { Button } from "../components/ui/button"
 import { Mail, Github, Linkedin } from "lucide-react"
-import { personalInfo } from "@/data/personalInfo"
+import { personalInfo } from "../data/personalInfo"
 
 export const ContactSection = () => {
   return (
@@ -80,12 +80,14 @@ export const ContactSection = () => {
                   }}
                   onClick={() => window.open(personalInfo.github, "_blank")}
                   onMouseEnter={(e) => {
-                    e.target.style.backgroundColor = "#059669"
-                    e.target.style.transform = "scale(1.05)"
+                    const target = e.target as HTMLButtonElement
+                    target.style.backgroundColor = "#059669"
+                    target.style.transform = "scale(1.05)"
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.backgroundColor = "#10b981"
-                    e.target.style.transform = "scale(1)"
+                    const target = e.target as HTMLButtonElement
+                    target.style.backgroundColor = "#10b981"
+                    target.style.transform = "scale(1)"
                   }}
                 >
                   <Github size={16} />
@@ -108,12 +110,14 @@ export const ContactSection = () => {
                   }}
                   onClick={() => window.open(personalInfo.linkedin, "_blank")}
                   onMouseEnter={(e) => {
-                    e.target.style.backgroundColor = "#059669"
-                    e.target.style.transform = "scale(1.05)"
+                    const target = e.target as HTMLButtonElement
+                    target.style.backgroundColor = "#059669"
+                    target.style.transform = "scale(1.05)"
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.backgroundColor = "#10b981"
-                    e.target.style.transform = "scale(1)"
+                    const target = e.target as HTMLButtonElement
+                    target.style.backgroundColor = "#10b981"
+                    target.style.transform = "scale(1)"
                   }}
                 >
                   <Linkedin size={16} />
@@ -235,12 +239,14 @@ export const ContactSection = () => {
                     transform: "scale(1)",
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.backgroundColor = "#059669"
-                    e.target.style.transform = "scale(1.05)"
+                    const target = e.target as HTMLButtonElement
+                    target.style.backgroundColor = "#059669"
+                    target.style.transform = "scale(1.05)"
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.backgroundColor = "#10b981"
-                    e.target.style.transform = "scale(1)"
+                    const target = e.target as HTMLButtonElement
+                    target.style.backgroundColor = "#10b981"
+                    target.style.transform = "scale(1)"
                   }}
                 >
                   Enviar Mensagem

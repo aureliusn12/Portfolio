@@ -1,7 +1,7 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { personalInfo } from "@/data/personalInfo"
+import { Button } from "../components/ui/button"
+import { personalInfo } from "../data/personalInfo"
 
 interface HeroSectionProps {
   scrollToSection: (sectionId: string) => void
@@ -82,12 +82,14 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                 transform: "scale(1)",
               }}
               onMouseEnter={(e) => {
-                e.target.style.backgroundColor = "#059669"
-                e.target.style.transform = "scale(1.05)"
+                const target = e.target as HTMLButtonElement
+                target.style.backgroundColor = "#059669"
+                target.style.transform = "scale(1.05)"
               }}
               onMouseLeave={(e) => {
-                e.target.style.backgroundColor = "#10b981"
-                e.target.style.transform = "scale(1)"
+                const target = e.target as HTMLButtonElement
+                target.style.backgroundColor = "#10b981"
+                target.style.transform = "scale(1)"
               }}
             >
               Ver Projetos
@@ -106,14 +108,16 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                 transform: "scale(1)",
               }}
               onMouseEnter={(e) => {
-                e.target.style.backgroundColor = "#10b981"
-                e.target.style.color = "#000000"
-                e.target.style.transform = "scale(1.05)"
+                const target = e.target as HTMLButtonElement
+                target.style.backgroundColor = "#10b981"
+                target.style.color = "#000000"
+                target.style.transform = "scale(1.05)"
               }}
               onMouseLeave={(e) => {
-                e.target.style.backgroundColor = "transparent"
-                e.target.style.color = "#10b981"
-                e.target.style.transform = "scale(1)"
+                const target = e.target as HTMLButtonElement
+                target.style.backgroundColor = "transparent"
+                target.style.color = "#10b981"
+                target.style.transform = "scale(1)"
               }}
             >
               Entre em Contato

@@ -29,12 +29,14 @@ export const ScrollToTopButton = ({ showScrollTop, scrollToTop }: ScrollToTopBut
         zIndex: 50,
       }}
       onMouseEnter={(e) => {
-        e.target.style.backgroundColor = "#059669"
-        e.target.style.transform = "scale(1.1)"
+        const target = e.target as HTMLButtonElement
+        target.style.backgroundColor = "#059669"
+        target.style.transform = "scale(1.1)"
       }}
       onMouseLeave={(e) => {
-        e.target.style.backgroundColor = "#10b981"
-        e.target.style.transform = "scale(1)"
+        const target = e.target as HTMLButtonElement
+        target.style.backgroundColor = "#10b981"
+        target.style.transform = "scale(1)"
       }}
     >
       <ArrowUp size={24} />

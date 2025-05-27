@@ -1,6 +1,6 @@
 "use client"
 
-import { personalInfo } from "@/data/personalInfo"
+import { personalInfo } from "../data/personalInfo"
 
 export const Footer = () => {
   return (
@@ -11,7 +11,7 @@ export const Footer = () => {
       }}
     >
       <div style={{ maxWidth: "96rem", margin: "0 auto", textAlign: "center" }}>
-        <p style={{ color: "#9ca3af" }}>© 2024 {personalInfo.name}. Todos os direitos reservados.</p>
+        <p style={{ color: "#9ca3af" }}>© 2025 {personalInfo.name}. Todos os direitos reservados.</p>
       </div>
     </footer>
   )

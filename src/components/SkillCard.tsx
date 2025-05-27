@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import type { Skill } from "@/types"
+import type { Skill } from "../types"
 
 interface SkillCardProps {
   skill: Skill
