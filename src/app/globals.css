@@ -2,61 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: 0 0% 100%;
-  --foreground: 0 0% 3.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 3.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 3.9%;
-  --primary: 142.1 76.2% 36.3%;
-  --primary-foreground: 355.7 100% 97.3%;
-  --secondary: 0 0% 96.1%;
-  --secondary-foreground: 0 0% 9%;
-  --muted: 0 0% 96.1%;
-  --muted-foreground: 0 0% 45.1%;
-  --accent: 0 0% 96.1%;
-  --accent-foreground: 0 0% 9%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 89.8%;
-  --input: 0 0% 89.8%;
-  --ring: 142.1 76.2% 36.3%;
-  --radius: 0.75rem;
+/* Reset e Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.dark {
-  --background: 0 0% 3.9%;
-  --foreground: 0 0% 98%;
-  --card: 0 0% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --popover: 0 0% 3.9%;
-  --popover-foreground: 0 0% 98%;
-  --primary: 142.1 70.6% 45.3%;
-  --primary-foreground: 144.9 80.4% 10%;
-  --secondary: 0 0% 14.9%;
-  --secondary-foreground: 0 0% 98%;
-  --muted: 0 0% 14.9%;
-  --muted-foreground: 0 0% 63.9%;
-  --accent: 0 0% 14.9%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 14.9%;
-  --input: 0 0% 14.9%;
-  --ring: 142.1 70.6% 45.3%;
+html {
+  scroll-behavior: smooth;
+  background-color: #000000 !important;
 }
 
-@layer base {
-  * {
-    @apply border-neutral-200 dark:border-neutral-800;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
 }
 
-/* Custom Animations */
+/* Animações Customizadas */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -114,41 +79,7 @@
   animation-delay: 900ms;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #000;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #10b981;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #059669;
-}
-
-/* Intersection Observer Animation Trigger */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
-}
-
-.animate-on-scroll.animate {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+/* Scroll Animations */
 .scroll-animate {
   opacity: 0;
   transform: translateY(40px);
@@ -213,17 +144,6 @@ html {
   transform: translateY(0);
 }
 
-.slide-in-down {
-  opacity: 0;
-  transform: translateY(-60px);
-  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.slide-in-down.animate-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .scale-in {
   opacity: 0;
   transform: scale(0.85);
@@ -235,214 +155,80 @@ html {
   transform: scale(1);
 }
 
-.rotate-in {
-  opacity: 0;
-  transform: rotate(-15deg) scale(0.85);
-  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.rotate-in.animate-in {
-  opacity: 1;
-  transform: rotate(0deg) scale(1);
-}
-
+/* Animation Delays */
 .animation-delay-100 {
   animation-delay: 150ms;
   transition-delay: 150ms;
 }
-
 .animation-delay-200 {
   animation-delay: 300ms;
   transition-delay: 300ms;
 }
-
 .animation-delay-300 {
   animation-delay: 450ms;
   transition-delay: 450ms;
 }
-
 .animation-delay-400 {
   animation-delay: 600ms;
   transition-delay: 600ms;
 }
-
 .animation-delay-500 {
   animation-delay: 750ms;
   transition-delay: 750ms;
 }
-
 .animation-delay-600 {
   animation-delay: 900ms;
   transition-delay: 900ms;
 }
-
 .animation-delay-700 {
   animation-delay: 1050ms;
   transition-delay: 1050ms;
 }
-
 .animation-delay-800 {
   animation-delay: 1200ms;
   transition-delay: 1200ms;
 }
 
-/* Parallax Effect */
-.parallax {
-  transform: translateZ(0);
-  will-change: transform;
-}
-
-.hover-lift {
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hover-lift:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(16, 185, 129, 0.25);
-}
-
-/* Typing Animation */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #10b981;
-  }
-}
-
-.typing-animation {
-  overflow: hidden;
-  border-right: 3px solid #10b981;
-  white-space: nowrap;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-/* Pulse Animation for Important Elements */
-.pulse-glow {
-  animation: pulse-glow 2s infinite;
-}
-
-@keyframes pulse-glow {
-  0% {
-    box-shadow: 0 0 5px rgba(16, 185, 129, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.8);
-  }
-  100% {
-    box-shadow: 0 0 5px rgba(16, 185, 129, 0.5);
-  }
-}
-
-/* Smooth reveal for text elements */
-.text-reveal {
-  background: linear-gradient(90deg, transparent 0%, #fff 50%, transparent 100%);
-  background-size: 200% 100%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  animation: text-reveal 2s ease-in-out;
-}
-
-@keyframes text-reveal {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-/* Matrix Background Styles */
+/* Matrix Canvas */
 #matrix-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.15;
-  background: transparent;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  opacity: 0.25 !important;
+  background: transparent !important;
 }
 
-/* Matrix glow effect */
-@keyframes matrix-glow {
-  0%,
-  100% {
-    filter: brightness(1) contrast(1);
-  }
-  50% {
-    filter: brightness(1.2) contrast(1.1);
-  }
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-#matrix-canvas {
-  animation: matrix-glow 4s ease-in-out infinite;
+::-webkit-scrollbar-track {
+  background: #000;
 }
 
-/* Overlay gradient for better readability */
-.matrix-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.3) 100%);
-  z-index: 1;
-  pointer-events: none;
+::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 4px;
 }
 
-/* Improve text contrast over matrix */
-.content-overlay {
-  position: relative;
-  z-index: 10;
-  background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(0.5px);
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
 }
 
-/* Special effect for important sections */
-.hero-glow {
-  text-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
-}
-
-/* Matrix particle animation */
-@keyframes matrix-particle {
-  0% {
-    transform: translateY(-100vh) rotate(0deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-/* Matrix responsiveness */
+/* Responsividade */
 @media (max-width: 768px) {
   #matrix-canvas {
-    opacity: 0.08;
+    opacity: 0.15 !important;
   }
 }
 
 @media (max-width: 480px) {
   #matrix-canvas {
-    opacity: 0.05;
+    opacity: 0.1 !important;
   }
 }
