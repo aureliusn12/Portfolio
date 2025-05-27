@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, Palette, Smartphone, ArrowUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import MatrixRain from "@/components/MatrixRain"
 
 const personalInfo = {
   name: "Aurelius Navi",
@@ -55,7 +56,6 @@ const skills = [
   },
 ]
 
-// Hook personalizado para animações de scroll
 const useScrollAnimation = () => {
   useEffect(() => {
     const observerOptions = {
@@ -71,7 +71,6 @@ const useScrollAnimation = () => {
       })
     }, observerOptions)
 
-    // Observar todos os elementos com classe de animação
     const animatedElements = document.querySelectorAll(".scroll-animate")
     animatedElements.forEach((el) => observer.observe(el))
 
@@ -81,7 +80,6 @@ const useScrollAnimation = () => {
   }, [])
 }
 
-// Componente de contador animado
 const AnimatedCounter = ({
   end,
   duration = 2000,
@@ -214,6 +212,7 @@ export default function Portfolio() {
 
   return (
     <div className="bg-black text-white min-h-screen">
+      <MatrixRain />
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50 border-b border-emerald-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
