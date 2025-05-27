@@ -5,6 +5,7 @@ import { Menu, X, Github, Linkedin, Mail, ExternalLink, Code, Palette, Smartphon
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
+// Componente Matrix Background - Versão Corrigida
 const MatrixBackground = () => {
   useEffect(() => {
     const canvas = document.getElementById("matrix-canvas") as HTMLCanvasElement
@@ -13,6 +14,7 @@ const MatrixBackground = () => {
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
+    // Configurar canvas para ocupar toda a tela
     const resizeCanvas = () => {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
@@ -46,17 +48,19 @@ const MatrixBackground = () => {
         // Escolher caractere aleatório
         const char = matrixChars[Math.floor(Math.random() * matrixChars.length)]
 
+        // Criar variação de opacidade - MAIS VISÍVEL
         const opacity = Math.random() * 0.7 + 0.3
         ctx.fillStyle = `rgba(16, 185, 129, ${opacity})`
 
         // Desenhar o caractere
         ctx.fillText(char, i * fontSize, drops[i] * fontSize)
 
+        // Resetar drop quando sair da tela ou aleatoriamente - MAIS LENTO
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.985) {
           drops[i] = 0
         }
 
-        drops[i] += 0.7
+        drops[i] += 0.7 // Velocidade reduzida de 1 para 0.7
       }
 
       animationId = requestAnimationFrame(draw)
@@ -77,7 +81,7 @@ const MatrixBackground = () => {
       className="fixed inset-0 w-full h-full pointer-events-none"
       style={{
         zIndex: 0,
-        opacity: 0.3,
+        opacity: 0.3, // Aumentado de 0.2 para 0.3
         background: "transparent",
       }}
     />
@@ -89,9 +93,9 @@ const personalInfo = {
   title: "Desenvolvedor Full Stack & Designer UI/UX",
   description:
     "Transformo ideias em experiências digitais incríveis. Especializado em React, Node.js e design responsivo.",
-  email: "aureliusnavi7@gmail.com",
-  github: "https://github.com/aureliusn12",
-  linkedin: "https://linkedin.com/in/aureliusnavi",
+  email: "seu.email@exemplo.com",
+  github: "https://github.com/seuusuario",
+  linkedin: "https://linkedin.com/in/seuusuario",
   bio: {
     title: "Desenvolvedor Apaixonado por Tecnologia",
     paragraph1:
@@ -403,7 +407,7 @@ export default function Portfolio() {
               <div className="animate-slide-in-left">
                 <img
                   src="/placeholder.svg?height=400&width=400"
-                  alt="Minha Foto"
+                  alt="João Silva"
                   className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
                 />
               </div>
@@ -592,7 +596,7 @@ export default function Portfolio() {
                       <input
                         type="email"
                         className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:border-emerald-500 focus:outline-none transition-colors text-white"
-                        placeholder="SeuEmail@email.com"
+                        placeholder="seu@email.com"
                       />
                     </div>
                     <div className="scroll-animate fade-in animation-delay-600">
