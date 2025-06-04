@@ -1,7 +1,7 @@
 "use client"
 
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "../components/ui/card"
+import { Button } from "../components/ui/button"
 import { Github, ExternalLink } from "lucide-react"
 import type { Project } from "@/types"
 
@@ -22,11 +22,11 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
         transform: "scale(1)",
       }}
       className="scroll-animate slide-in-up group"
-      onMouseEnter={(e) => {
+      onMouseEnter={(e: React.MouseEvent<HTMLDivElement>) => {
         e.currentTarget.style.borderColor = "rgba(16, 185, 129, 0.5)"
         e.currentTarget.style.transform = "scale(1.05)"
       }}
-      onMouseLeave={(e) => {
+      onMouseLeave={(e: React.MouseEvent<HTMLDivElement>) => {
         e.currentTarget.style.borderColor = "#374151"
         e.currentTarget.style.transform = "scale(1)"
       }}
