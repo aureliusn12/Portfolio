@@ -184,6 +184,7 @@ const ContactSection = () => {
                   Nome
                 </label>
                 <input
+                  spellCheck={false}
                   type="text"
                   id="name"
                   name="name"
