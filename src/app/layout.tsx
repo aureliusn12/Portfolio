@@ -1,23 +1,23 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Aurelius Navi - Portfolio",
-  description: "Desenvolvedor Full Stack & Designer UI/UX",
+  title: "Aurelius Navi | Desenvolvedor & Hacker",
+  description: "Portfólio pessoal de Aurelius Navi - Desenvolvedor Full Stack e entusiasta de segurança",
 }
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode
-}) {
+}>) {
   return (
-    <html lang="pt-BR" className="dark">
-      <body className={`${inter.className} bg-black text-white antialiased`}>{children}</body>
+    <html lang="pt-BR">
+      <body className={jetbrainsMono.className}>{children}</body>
     </html>
   )
 }

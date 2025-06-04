@@ -1,35 +1,35 @@
-import type { Project } from "../types"
+import type { Project } from "@/types"
 
 export const projects: Project[] = [
   {
-    title: "E-commerce Platform",
-    description: "Plataforma completa de e-commerce com React, Node.js e MongoDB",
+    title: "Chat Bot Dimmy",
+    description: "Chatbot inteligente com protocolos de segurança avançados e criptografia end-to-end",
     image: "/placeholder.svg?height=200&width=300",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+    tech: ["JavaScript", "Node.js", "Encryption", "Security APIs"],
+    github: "https://github.com/aureliusn12/Chat-Bot-Dimmy",
+    demo: "#",
+  },
+  {
+    title: "Vulnerability Scanner",
+    description: "Scanner automatizado de vulnerabilidades para aplicações web com relatórios detalhados",
+    image: "/placeholder.svg?height=200&width=300",
+    tech: ["Python", "Nmap", "OWASP ZAP", "SQLMap"],
     github: "#",
     demo: "#",
   },
   {
-    title: "Task Management App",
-    description: "Aplicativo de gerenciamento de tarefas com drag & drop",
+    title: "SIEM Dashboard",
+    description: "Dashboard de monitoramento de segurança em tempo real com alertas inteligentes",
     image: "/placeholder.svg?height=200&width=300",
-    tech: ["Vue.js", "Firebase", "Tailwind CSS"],
+    tech: ["React", "ELK Stack", "Splunk", "Python"],
     github: "#",
     demo: "#",
   },
   {
-    title: "Weather Dashboard",
-    description: "Dashboard meteorológico com gráficos interativos",
+    title: "Secure API Gateway",
+    description: "Gateway de API com autenticação multi-fator e proteção contra ataques DDoS",
     image: "/placeholder.svg?height=200&width=300",
-    tech: ["React", "Chart.js", "OpenWeather API"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Social Media App",
-    description: "Rede social com chat em tempo real",
-    image: "/placeholder.svg?height=200&width=300",
-    tech: ["Next.js", "Socket.io", "PostgreSQL"],
+    tech: ["Node.js", "JWT", "Rate Limiting", "WAF"],
     github: "#",
     demo: "#",
   },

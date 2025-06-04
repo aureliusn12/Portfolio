@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Github, ExternalLink } from "lucide-react"
-import type { Project } from "../types"
+import type { Project } from "@/types"
 
 interface ProjectCardProps {
   project: Project

@@ -1,15 +1,18 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 
-export const MatrixBackground = () => {
+const MatrixBackground = () => {
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+
   useEffect(() => {
-    const canvas = document.getElementById("matrix-canvas") as HTMLCanvasElement
+    const canvas = canvasRef.current
     if (!canvas) return
 
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
+    // Configurar canvas para ocupar toda a tela
     const resizeCanvas = () => {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
@@ -18,38 +21,57 @@ export const MatrixBackground = () => {
     resizeCanvas()
     window.addEventListener("resize", resizeCanvas)
 
-    const matrixChars =
-      "01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン{}[]()<>/\\|;:.,?!@#$%^&*+-=_`~"
+    // Caracteres para a cascata (incluindo caracteres de código, japoneses e símbolos)
+    const chars =
+      "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン01{}[]()<>/\\|;:.,?!@#$%^&*+-=_`~"
     const fontSize = 14
     const columns = Math.floor(canvas.width / fontSize)
-    const drops: number[] = new Array(columns).fill(1)
+    const drops: number[] = []
 
+    // Inicializar drops com posições aleatórias
     for (let i = 0; i < columns; i++) {
       drops[i] = Math.random() * -100
     }
 
+    // Variáveis para controle de velocidade e densidade
+    const speed = 0.8 // Velocidade de queda (menor = mais lento)
+    const density = 0.98 // Probabilidade de resetar (maior = mais denso)
+
     let animationId: number
 
     const draw = () => {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.02)"
+      // Criar efeito de fade com fundo semi-transparente
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)"
       ctx.fillRect(0, 0, canvas.width, canvas.height)
+
       ctx.font = `${fontSize}px monospace`
 
       for (let i = 0; i < drops.length; i++) {
-        const char = matrixChars[Math.floor(Math.random() * matrixChars.length)]
-        const opacity = Math.random() * 0.7 + 0.3
-        ctx.fillStyle = `rgba(16, 185, 129, ${opacity})`
+        // Escolher caractere aleatório
+        const char = chars[Math.floor(Math.random() * chars.length)]
+
+        // Criar variação de opacidade e brilho
+        const opacity = Math.random() * 0.5 + 0.5
+        const brightness = Math.random() > 0.95 ? 1 : 0.8 // Alguns caracteres mais brilhantes
+
+        // Cor verde com variação de brilho
+        ctx.fillStyle = `rgba(0, ${Math.floor(255 * brightness)}, 0, ${opacity})`
+
+        // Desenhar o caractere
         ctx.fillText(char, i * fontSize, drops[i] * fontSize)
 
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.985) {
+        // Resetar drop quando sair da tela ou aleatoriamente
+        if (drops[i] * fontSize > canvas.height && Math.random() > density) {
           drops[i] = 0
         }
-        drops[i] += 0.7
+
+        drops[i] += speed
       }
 
       animationId = requestAnimationFrame(draw)
     }
 
+    // Iniciar animação
     draw()
 
     return () => {
@@ -58,5 +80,7 @@ export const MatrixBackground = () => {
     }
   }, [])
 
-  return <canvas id="matrix-canvas" />
+  return <canvas ref={canvasRef} id="matrix-canvas" />
 }
+
+export default MatrixBackground

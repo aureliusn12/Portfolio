@@ -1,19 +1,19 @@
-import type { PersonalInfo } from "../types"
+import type { PersonalInfo } from "@/types"
 
 export const personalInfo: PersonalInfo = {
   name: "Aurelius Navi",
-  title: "Desenvolvedor Full Stack & Designer UI/UX",
+  title: "Engenheiro de Software & Especialista em Segurança Cibernética",
   description:
-    "Transformo ideias em experiências digitais incríveis. Especializado em React, Node.js e design responsivo.",
-  email: "aureliusnavi7@gmail.com",
+    "Protejo sistemas digitais e desenvolvo soluções seguras. Especializado em pentesting, análise de vulnerabilidades e arquiteturas resilientes.",
+  email: "aurelius.navi@security.com",
   github: "https://github.com/aureliusn12",
-  linkedin: "https://linkedin.com/in/aureliusnavi",
+  linkedin: "https://linkedin.com/in/aureliusn12",
   bio: {
-    title: "Desenvolvedor Apaixonado por Tecnologia",
+    title: "Engenheiro Focado em Segurança Digital",
     paragraph1:
-      "Com mais de X anos de experiência em desenvolvimento web, sou especializado em criar soluções digitais inovadoras e funcionais. Minha paixão é transformar ideias complexas em interfaces intuitivas e experiências de usuário excepcionais.",
+      "Com mais de 5 anos de experiência em engenharia de software e segurança cibernética, especializo-me em identificar vulnerabilidades, implementar medidas de proteção e desenvolver sistemas resilientes contra ameaças digitais.",
     paragraph2:
-      "Trabalho com as mais modernas tecnologias do mercado, sempre buscando aprender e me atualizar com as últimas tendências do desenvolvimento web e mobile.",
-    mainTechs: ["React", "Node.js", "TypeScript", "Figma", "Git"],
+      "Trabalho com as mais avançadas ferramentas de segurança e frameworks de desenvolvimento, sempre mantendo o foco na criação de soluções robustas e seguras para ambientes corporativos críticos.",
+    mainTechs: ["Python", "Kali Linux", "Burp Suite", "Docker", "AWS Security"],
   },
 }
