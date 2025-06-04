@@ -21,9 +21,34 @@ const ContactSection = () => {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    const webhookUrl = "https://discord.com/api/webhooks/1379840222413717714/IuCV6JCmcRUdwTETx2drKX2wTLRbtKrEEF5wkNUB4cIhmZ26Ynvs135MUtwGVQ5LMcMa"
+    try {
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          content: "",
+          embeds: [
+            {
+              title: "Novo Contato do Portfólio",
+              description: `**Nome:** ${formData.name}\n**Email:** ${formData.email}\n**Mensagem:** ${formData.message}`,
+              color: 3066993, 
+            },
+          ],
+        }),
+      });
+      if (!response.ok) {
+        throw new Error("Erro ao enviar mensagem");
+      }
+      setFormData({ name: "", email: "", message: "" })
+    } catch (error) {
+      console.error("Erro ao enviar mensagem", error)
+    }
 
     // Simulação de envio
     setTimeout(() => {
