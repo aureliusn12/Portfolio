@@ -60,7 +60,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center text-gray-400 text-sm">
                 <MapPin size={14} className="mr-1 text-[#0f0]" />
-                <span>São Paulo, BR</span>
+                <span>Teresina, BR</span>
               </div>
               <div className="flex items-center text-gray-400 text-sm">
                 <Coffee size={14} className="mr-1 text-[#0f0]" />

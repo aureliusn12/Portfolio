@@ -75,7 +75,7 @@ const HeroSection = () => {
       </div>
 
       {/* Terminal decorativo */}
-      <div className="absolute bottom-40 left-10 hidden lg:block opacity-30 rotate-[-15deg]">
+      <div className="absolute bottom-40 left-10 hidden lg:block opacity-60 rotate-[-15deg]">
         <div className="terminal p-4 w-64">
           <div className="text-xs text-[#0f0]">
             <div>$ whoami</div>
@@ -90,7 +90,7 @@ const HeroSection = () => {
       </div>
 
       {/* Terminal decorativo 2 */}
-      <div className="absolute top-40 right-10 hidden lg:block opacity-30 rotate-[10deg]">
+      <div className="absolute top-40 right-10 hidden lg:block opacity-60 rotate-[10deg]">
         <div className="terminal p-4 w-64">
           <div className="text-xs text-[#0f0]">
             <div>$ npm start</div>

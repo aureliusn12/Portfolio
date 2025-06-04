@@ -59,7 +59,7 @@ const ContactSection = () => {
                   <Mail className="text-[#0f0] mr-4 mt-1" size={20} />
                   <div>
                     <h4 className="text-white font-medium mb-1">Email</h4>
-                    <p className="text-gray-400">contact@aureliusnavi.dev</p>
+                    <p className="text-gray-400">aureliusnavi7@gmail.com</p>
                   </div>
                 </div>
 
@@ -67,7 +67,7 @@ const ContactSection = () => {
                   <MapPin className="text-[#0f0] mr-4 mt-1" size={20} />
                   <div>
                     <h4 className="text-white font-medium mb-1">Localização</h4>
-                    <p className="text-gray-400">São Paulo, Brasil</p>
+                    <p className="text-gray-400">Teresina, Brasil</p>
                   </div>
                 </div>
 
@@ -75,7 +75,7 @@ const ContactSection = () => {
                   <Phone className="text-[#0f0] mr-4 mt-1" size={20} />
                   <div>
                     <h4 className="text-white font-medium mb-1">Telefone</h4>
-                    <p className="text-gray-400">+55 (11) 9xxxx-xxxx</p>
+                    <p className="text-gray-400">+55 (86) 99406-9611</p>
                   </div>
                 </div>
               </div>
@@ -104,7 +104,7 @@ const ContactSection = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://linkedin.com/in/aureliusn12"
+                    href="https://linkedin.com/in/aureliusnavi"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-[#0f0]/10 flex items-center justify-center text-[#0f0] hover:bg-[#0f0]/20 transition-all duration-300 hover:shadow-[0_0_10px_rgba(0,255,0,0.5)]"
@@ -126,7 +126,7 @@ const ContactSection = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://wa.me/5511999999999"
+                    href="https://wa.me/5586994069611"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-[#0f0]/10 flex items-center justify-center text-[#0f0] hover:bg-[#0f0]/20 transition-all duration-300 hover:shadow-[0_0_10px_rgba(0,255,0,0.5)]"

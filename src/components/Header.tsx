@@ -60,7 +60,7 @@ const Header = () => {
             <Github size={20} />
           </a>
           <a
-            href="https://linkedin.com/in/aureliusn12"
+            href="https://linkedin.com/in/aureliusnavi"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-[#0f0] transition-all duration-300 hover-glow"
@@ -69,7 +69,7 @@ const Header = () => {
             <Linkedin size={20} />
           </a>
           <a
-            href="mailto:contact@aureliusnavi.dev"
+            href="mailto:aureliusnavi7@gmail.com"
             className="text-gray-400 hover:text-[#0f0] transition-all duration-300 hover-glow"
             aria-label="Email"
           >
@@ -121,7 +121,7 @@ const Header = () => {
                   <Github size={20} />
                 </a>
                 <a
-                  href="https://linkedin.com/in/aureliusn12"
+                  href="https://linkedin.com/in/aureliusnavi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-[#0f0] transition-all duration-300 hover-glow"
@@ -130,7 +130,7 @@ const Header = () => {
                   <Linkedin size={20} />
                 </a>
                 <a
-                  href="mailto:contact@aureliusnavi.dev"
+                  href="mailto:aureliusnavi7@gmail.com"
                   className="text-gray-400 hover:text-[#0f0] transition-all duration-300 hover-glow"
                   aria-label="Email"
                 >

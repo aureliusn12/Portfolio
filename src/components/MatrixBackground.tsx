@@ -34,7 +34,7 @@ const MatrixBackground = () => {
     }
 
     // Variáveis para controle de velocidade e densidade
-    const speed = 0.8 // Velocidade de queda (menor = mais lento)
+    const speed = 0.6 // Velocidade de queda (menor = mais lento)
     const density = 0.98 // Probabilidade de resetar (maior = mais denso)
 
     let animationId: number
@@ -50,9 +50,9 @@ const MatrixBackground = () => {
         // Escolher caractere aleatório
         const char = chars[Math.floor(Math.random() * chars.length)]
 
-        // Criar variação de opacidade e brilho
-        const opacity = Math.random() * 0.5 + 0.5
-        const brightness = Math.random() > 0.95 ? 1 : 0.8 // Alguns caracteres mais brilhantes
+        // opacidade e brilho
+        const opacity = 1
+        const brightness = 5
 
         // Cor verde com variação de brilho
         ctx.fillStyle = `rgba(0, ${Math.floor(255 * brightness)}, 0, ${opacity})`

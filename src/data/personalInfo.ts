@@ -5,9 +5,9 @@ export const personalInfo: PersonalInfo = {
   title: "Engenheiro de Software & Especialista em Segurança Cibernética",
   description:
     "Protejo sistemas digitais e desenvolvo soluções seguras. Especializado em pentesting, análise de vulnerabilidades e arquiteturas resilientes.",
-  email: "aurelius.navi@security.com",
+  email: "aurelius.navi@gmail.com",
   github: "https://github.com/aureliusn12",
-  linkedin: "https://linkedin.com/in/aureliusn12",
+  linkedin: "https://linkedin.com/in/aureliusnavi",
   bio: {
     title: "Engenheiro Focado em Segurança Digital",
     paragraph1:
