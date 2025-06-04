@@ -7,30 +7,17 @@ export const PortfolioSection = () => {
   return (
     <section
       id="portfolio"
-      style={{
-        padding: "5rem 1rem",
-        backgroundColor: "rgba(17, 24, 39, 0.5)",
-      }}
+      className="py-20 px-4 bg-gray-900/50"
     >
-      <div style={{ maxWidth: "96rem", margin: "0 auto" }}>
+      <div className="max-w-6xl mx-auto">
         <h2
-          style={{
-            fontSize: "clamp(2.5rem, 6vw, 5rem)",
-            fontWeight: "bold",
-            textAlign: "center",
-            marginBottom: "4rem",
-            color: "#10b981",
-          }}
+          className="text-5xl md:text-6xl font-bold text-center mb-16 text-emerald-500"
         >
           Meu Portfólio
         </h2>
 
         <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
-            gap: "2rem",
-          }}
+          className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
         >
           {projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
