@@ -49,7 +49,7 @@ const HeroSection = () => {
 
         <p className="text-gray-400 max-w-2xl mx-auto mb-12 text-sm md:text-base">
           Transformando ideias em código e construindo soluções digitais seguras e eficientes. Especializado em
-          desenvolvimento web, automação e segurança de aplicações.
+          desenvolvimento web, automação e aprendiz em segurança de aplicações.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
