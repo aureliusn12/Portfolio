@@ -157,7 +157,7 @@ export const Navigation = ({ activeSection, scrollToSection }: NavigationProps) 
               <Github size={18} />
             </a>
             <a
-              href="https://linkedin.com/in/aureliusn12"
+              href="https://linkedin.com/in/aureliusnavi"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -172,7 +172,7 @@ export const Navigation = ({ activeSection, scrollToSection }: NavigationProps) 
               <Linkedin size={18} />
             </a>
             <a
-              href="mailto:aurelius.navi@security.com"
+              href="mailto:aureliusnavi7@gmail.com"
               style={{
                 color: "#9ca3af",
                 transition: "color 0.3s",

@@ -82,7 +82,7 @@ const AboutSection = () => {
               <ul className="space-y-2 text-gray-300">
                 <li className="flex items-start">
                   <span className="text-[#0f0] mr-2">&#9654;</span>
-                  <span>Bacharelado em Ciência da Computação</span>
+                  <span>Bacharelado em Engenharia de Software</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#0f0] mr-2">&#9654;</span>

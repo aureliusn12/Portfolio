@@ -19,7 +19,7 @@ const ProjectsSection = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Chat Bot Dimmy",
+      title: "Chat Bot Inteligente",
       description: "Chatbot inteligente com interface interativa e respostas personalizadas",
       image: "/placeholder.svg?height=200&width=300",
       tech: ["JavaScript", "Node.js", "AI", "API Integration"],
