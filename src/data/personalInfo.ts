@@ -1,19 +1,20 @@
 import type { PersonalInfo } from "@/types"
 
+// FIX: all fields now aligned with Red Team / pentest objective
 export const personalInfo: PersonalInfo = {
   name: "Aurelius Navi",
-  title: "Engenheiro de Software & Especialista em Segurança Cibernética",
+  title: "Red Team & Pentest | Engenharia de Software",
   description:
-    "Protejo sistemas digitais e desenvolvo soluções seguras. Especializado em pentesting, análise de vulnerabilidades e arquiteturas resilientes.",
-  email: "aurelius.navi@gmail.com",
+    "Graduando em Engenharia de Software com foco em segurança ofensiva — pentest, Red Team e desenvolvimento seguro. Open to Work.",
+  email: "aureliusnavi7@gmail.com",
   github: "https://github.com/aureliusn12",
   linkedin: "https://linkedin.com/in/aureliusnavi",
   bio: {
-    title: "Engenheiro Focado em Segurança Digital",
+    title: "Segurança Ofensiva & Desenvolvimento",
     paragraph1:
-      "Com mais de 5 anos de experiência em engenharia de software e segurança cibernética, especializo-me em identificar vulnerabilidades, implementar medidas de proteção e desenvolver sistemas resilientes contra ameaças digitais.",
+      "Graduando em Engenharia de Software na iCEV com foco em segurança ofensiva. Atuo como estagiário de Ciência de Dados na Fadex (Python, automação, APIs Twilio) e exploro ativamente pentest web, análise de vulnerabilidades e ferramentas de Red Team.",
     paragraph2:
-      "Trabalho com as mais avançadas ferramentas de segurança e frameworks de desenvolvimento, sempre mantendo o foco na criação de soluções robustas e seguras para ambientes corporativos críticos.",
-    mainTechs: ["Python", "Kali Linux", "Burp Suite", "Docker", "AWS Security"],
+      "Em julho de 2024, atuei como tradutor técnico no Hub Investe Piauí, conectando empresas do setor apícola a investidores de seis países. Inglês avançado (Wizard by Pearson, 6 anos). Busco estágio ou trainee em cibersegurança, pentest ou Red Team.",
+    mainTechs: ["Kali Linux", "Python", "Burp Suite", "Nmap", "OWASP"],
   },
 }

@@ -1,36 +1,41 @@
 import type { Project } from "@/types"
 
+// FIX: demo field is now optional/null — no more "#" dead links
 export const projects: Project[] = [
   {
     title: "Chat Bot Dimmy",
-    description: "Chatbot inteligente com protocolos de segurança avançados e criptografia end-to-end",
-    image: "/placeholder.svg?height=200&width=300",
-    tech: ["JavaScript", "Node.js", "Encryption", "Security APIs"],
+    description:
+      "Chatbot inteligente em Python/Node.js com aprendizado por interações e integração com APIs externas.",
+    image: "/projects/chatbot-dimmy.png",
+    tech: ["JavaScript", "Node.js", "Python", "API Integration"],
     github: "https://github.com/aureliusn12/Chat-Bot-Dimmy",
-    demo: "#",
+    demo: null,
   },
   {
     title: "Vulnerability Scanner",
-    description: "Scanner automatizado de vulnerabilidades para aplicações web com relatórios detalhados",
-    image: "/placeholder.svg?height=200&width=300",
-    tech: ["Python", "Nmap", "OWASP ZAP", "SQLMap"],
-    github: "#",
-    demo: "#",
+    description:
+      "Scanner automatizado de vulnerabilidades para aplicações web. Integra Nmap, OWASP ZAP e SQLMap via Python.",
+    image: "/projects/vuln-scanner.png",
+    tech: ["Python", "Nmap", "OWASP ZAP", "SQLMap", "Bash"],
+    github: null,
+    demo: null,
   },
   {
     title: "SIEM Dashboard",
-    description: "Dashboard de monitoramento de segurança em tempo real com alertas inteligentes",
-    image: "/placeholder.svg?height=200&width=300",
-    tech: ["React", "ELK Stack", "Splunk", "Python"],
-    github: "#",
-    demo: "#",
+    description:
+      "Dashboard de monitoramento de segurança em tempo real com correlação de eventos via ELK Stack.",
+    image: "/projects/siem-dashboard.png",
+    tech: ["React", "TypeScript", "ELK Stack", "Python"],
+    github: null,
+    demo: null,
   },
   {
     title: "Secure API Gateway",
-    description: "Gateway de API com autenticação multi-fator e proteção contra ataques DDoS",
-    image: "/placeholder.svg?height=200&width=300",
-    tech: ["Node.js", "JWT", "Rate Limiting", "WAF"],
-    github: "#",
-    demo: "#",
+    description:
+      "Gateway de API com autenticação JWT, rate limiting e WAF básico contra DDoS e injeção.",
+    image: "/projects/api-gateway.png",
+    tech: ["Node.js", "TypeScript", "JWT", "Rate Limiting"],
+    github: null,
+    demo: null,
   },
 ]

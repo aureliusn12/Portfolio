@@ -12,7 +12,6 @@ const MatrixBackground = () => {
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
-    // Configurar canvas para ocupar toda a tela
     const resizeCanvas = () => {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
@@ -21,46 +20,42 @@ const MatrixBackground = () => {
     resizeCanvas()
     window.addEventListener("resize", resizeCanvas)
 
-    // Caracteres para a cascata (incluindo caracteres de código, japoneses e símbolos)
     const chars =
       "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン01{}[]()<>/\\|;:.,?!@#$%^&*+-=_`~"
     const fontSize = 14
     const columns = Math.floor(canvas.width / fontSize)
     const drops: number[] = []
 
-    // Inicializar drops com posições aleatórias
     for (let i = 0; i < columns; i++) {
       drops[i] = Math.random() * -100
     }
 
-    // Variáveis para controle de velocidade e densidade
-    const speed = 0.6 // Velocidade de queda (menor = mais lento)
-    const density = 0.98 // Probabilidade de resetar (maior = mais denso)
+    const speed = 0.6
+    const density = 0.98
 
     let animationId: number
+    let isRunning = true
 
     const draw = () => {
-      // Criar efeito de fade com fundo semi-transparente
+      if (!isRunning) return
+
       ctx.fillStyle = "rgba(0, 0, 0, 0.05)"
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
       ctx.font = `${fontSize}px monospace`
 
       for (let i = 0; i < drops.length; i++) {
-        // Escolher caractere aleatório
         const char = chars[Math.floor(Math.random() * chars.length)]
 
-        // opacidade e brilho
-        const opacity = 1
-        const brightness = 5
+        // FIX: original had brightness=5 which gives rgba(0,1275,0) — clamped but wasteful
+        // Use explicit color values instead
+        const isHead = drops[i] * fontSize < canvas.height * 0.1
+        ctx.fillStyle = isHead
+          ? "rgba(200, 255, 200, 0.9)"   // bright head
+          : "rgba(0, 200, 0, 0.7)"        // trailing chars
 
-        // Cor verde com variação de brilho
-        ctx.fillStyle = `rgba(0, ${Math.floor(255 * brightness)}, 0, ${opacity})`
-
-        // Desenhar o caractere
         ctx.fillText(char, i * fontSize, drops[i] * fontSize)
 
-        // Resetar drop quando sair da tela ou aleatoriamente
         if (drops[i] * fontSize > canvas.height && Math.random() > density) {
           drops[i] = 0
         }
@@ -71,16 +66,36 @@ const MatrixBackground = () => {
       animationId = requestAnimationFrame(draw)
     }
 
-    // Iniciar animação
+    // FIX: pause animation when tab is not visible — saves CPU/battery
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        isRunning = false
+        cancelAnimationFrame(animationId)
+      } else {
+        isRunning = true
+        draw()
+      }
+    }
+
+    document.addEventListener("visibilitychange", handleVisibilityChange)
+
     draw()
 
     return () => {
+      isRunning = false
       cancelAnimationFrame(animationId)
       window.removeEventListener("resize", resizeCanvas)
+      document.removeEventListener("visibilitychange", handleVisibilityChange)
     }
   }, [])
 
-  return <canvas ref={canvasRef} id="matrix-canvas" />
+  return (
+    <canvas
+      ref={canvasRef}
+      id="matrix-canvas"
+      aria-hidden="true"   // FIX: decorative — should be hidden from screen readers
+    />
+  )
 }
 
 export default MatrixBackground
